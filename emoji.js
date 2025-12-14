@@ -47,6 +47,9 @@ function checkGuess() {
 
 function nextEmoji() {
   currentEmojiIndex++;
+  setInterval(() => {
+    resultElement.textContent = "";
+  }, 1000);
 
   if (currentEmojiIndex === emojiDetails.length) {
     currentEmojiIndex = 0;
